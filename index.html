@@ -3,30 +3,30 @@
     <head>
         <meta charset="utf-8">
         <title> About Me: Mohammed Alam</title> 
-        <link href="style.css" rel="stylesheet" type="text/CSS">
+        <link href="home_page.css" rel="stylesheet" type="text/CSS">
     </head>
     <body>
         <header>
             <nav id="menu">
                 <h1 id="title_screen">About Me - Mohammed Alam</h1>
-                <ul>
-                    <li class="menu_item"><a href="#intro">Brief Introduction</a></li>
-                    <li class="menu_item"><a href="#info">Basic Programming information</a></li>
-                    <li class="menu_item"><a href="#links">Here are some Links to my work</a></li>
-                    <li class="menu_item"><a href="#images">Images about me: </a></li>
+                <ul id="menfixed">
+                    <li class="menu_item"><a class="menu_item" href="#intro">Brief Introduction</a></li>
+                    <li class="menu_item"><a class="menu_item" href="#info">Basic Programming information</a></li>
+                    <li class="menu_item"><a class="menu_item" href="#links">Here are some Links to my work</a></li>
+                    <li class="menu_item"><a class="menu_item" href="#images">Images about me: </a></li>
                 </ul>
             </nav>
         </header>
 
-        <div>
-         <h2 id="intro">A Brief Introduction</h2>
-         <p>
+        <div class="sec">
+         <h2 id="intro_h2" class="sec_title">Brief Introduction</h2>
+         <p class="description">
             So as you can see formt he title and header above, my name is Mohammed Alam, and I am a student
             in the Computing Exploration Major here at RIT. I was unsure about what I wanted to major in, but 
             I knew it had to be about computers.
          </p>
 
-            <ul>
+            <ul class="description">
               <li>Name: Mohammed Alam</li>
               <li>Age: 18 as of 8/27/2020</li>
               <li>Major: Computing Exploration Student in RIT</li>
@@ -37,134 +37,165 @@
         </div>
 
         <br>
-        <div>
+        <div class="sec">
         
-            <h2 id="info">Basic programming information</h2>
+            <h2 id="info" class="sec_title">Basic programming information</h2>
          
             <p>
-                My programming experience is a bit sporadic, and I don't know where it goes most of the time
+                <span class="underlined">Starter:</span> My programming experience is a bit sporadic, and I don't know where it goes most of the time
                 I have 3 years of learning experience for programming languages in highschool as follows
             </p>
         <dl>
-            <dt>Sophomore Year of H.S.</dt>
+            <dt class="def_term">Sophomore Year of H.S.</dt>
             <dd>
-                <p>I tried my first ever programming class here, AP computer science principles
-                and I didn't like the class, but I thought it was because I had a disinterest
-                in programming, but it was truly because I really didn't care for the class, and I 
-                would have friends that do everything for me, so I thought of it as pretty hard
-                and never gave effort because I didn't have to. I was supposed to learn the languages 
-                of SNAP/SCRATCH, and Processing. I did a meh final year project and did meh on the AP 
-                exam with a score of 3, barely enough to get by without programming. </p>
+                <ol>
+                    <li class="description">I tried my first ever programming class here, <span class="important">AP computer science principles</span>
+                    and I didn't like the class, but I thought it was because I had a disinterest
+                    in programming, but it was truly because I really didn't care for the class, and I 
+                    would have friends that do everything for me, so I thought of it as pretty hard
+                    and never gave effort because I didn't have to. I was supposed to learn the languages 
+                    of SNAP/SCRATCH, and Processing. I did a meh final year project and did meh on the AP 
+                    exam with a score of 3, barely enough to get by without programming. </li>
+                </ol>
             </dd>
 
-            <dt>Junior Year of H.S.</dt>
+            <dt class="def_term">Junior Year of H.S.</dt>
             <dd>
-                <p>Well I thought software wasn't for me, and I loved building computers so I thought
-                the mechanical engineering process was the way for me to go, so I chose a high school
-                major called mechatronics & robotics because I thought it was fascinating, it pretty 
-                much was, I would learn a language called Arduino- which is a circuitry learning company
-                with different types of circuity pieces and circuits, we could code and tinker with. I would
-                make things such as calculators with the in the computer screen and use the digital push buttons 
-                as keys, and other things such as a button pressed sound and light shows displaying different 
-                light brightnesses and sound values. It was hard but pretty fun. </p>
-
-                <p>I had to perform with another programming language called Robot-C, a version of C that 
-                is used by robots made by VEX, and we can programm them and map them to specific buttons, 
-                keys and controllers to do things like, display and LED, move this way, turn this way, and etc.
-                I was getting more accusotmed to it but the year ended so meh. </p>
-
-                <p>Over the Summer I had a job and really didn't do much programming so I forgot a good deal 
-                about these languages, which I somewhat regretted. </p>
+                <ol>
+                    <li class="description">Well I thought software wasn't for me, and I loved building computers so I thought
+                    the mechanical engineering process was the way for me to go, so I chose a high school
+                    major called mechatronics & robotics because I thought it was fascinating, it pretty 
+                    much was, I would learn a language called <span class="important">Arduino</span>- which is a circuitry learning company
+                    with different types of circuity pieces and circuits, we could code and tinker with. I would
+                    make things such as calculators with the in the computer screen and use the digital push buttons 
+                    as keys, and other things such as a button pressed sound and light shows displaying different 
+                    light brightnesses and sound values. It was hard but pretty fun. </li>
+    
+                    <li class="description">I had to perform with another programming language called <span class="important">Robot-C</span> a version of C that 
+                    is used by robots made by VEX, and we can programm them and map them to specific buttons, 
+                    keys and controllers to do things like, display and LED, move this way, turn this way, and etc.
+                    I was getting more accusotmed to it but the year ended so meh. </li>
+    
+                    <li class="description">Over the Summer I had a job and really didn't do much programming so I forgot a good deal 
+                    about these languages, which I somewhat regretted. </li>
+                </ol>
             </dd>
 
-            <dt>Senior Year of H.S.</dt>
+            <dt class="def_term">Senior Year of H.S.</dt>
             <dd>
-                <p>I've had a mroe defined level of programming knowledge this year. TO keep it short I learned
-                this thing called labview which was sort of a drag and drop program but the National Instruments
-                LABview circuitry, which was a pain, but still pretty cool. I learned various mechancial languages 
-                such as robocell which allowed me to control a robot's arm by programming the joints, to do 
-                things such as draw and write. I learned how to carve designs into resign and wooden blocks with 
-                CNC machining languages, I learned to also use Autodesk inventor, not a prgramming language, but 
-                a professional designing tool which I was supposed ot get my PLTW certification for, along with 
-                the other languages. It was fun and I honed my level of Robot-C to an intermediate-advanced degree. </p>
-                
-                <p>I regretted not taking APCSA, or Java, which a lot of my firends took, and wouldn've helped me, 
-                because I learned I actually loved programming and just wasn't exposed to a great initial enviornment
-                so it was a decision I regreted. </p>
-
-                <p>I was supposed to use all these to display some final projects using industrial level 
-                machinery to make projects and robots. Like this one metal rocket piece I made with a plasma cutter,
-                and a huge robot that was supposed to play ping pong, albeit very slowly. We had to stop becuase of 
-                the pandemic, so at home I was taught Python and I did some rudimentary HTML and CSS by myself, that 
-                might get me by for a week or two. </p>
+                <ol>
+                    <li class="description">I've had a mroe defined level of programming knowledge this year. to keep it short, I learned
+                    this thing called <span class="important">NI Labview</span> which was sort of a drag and drop program but the National Instruments
+                    LABview circuitry, which was a pain, but still pretty cool. I learned various mechancial languages 
+                    such as robocell which allowed me to control a robot's arm by programming the joints, to do 
+                    things such as draw and write. I learned how to carve designs into resign and wooden blocks with 
+                    <span class="important">CNC machining languages</span>, I learned to also use Autodesk inventor, not a prgramming language, but 
+                    a professional designing tool which I was supposed ot get my PLTW certification for, along with 
+                    the other languages. It was fun and I honed my level of Robot-C to an intermediate-advanced degree. </li>
+                    
+                    <li class="description">I regretted not taking APCSA, or Java, which a lot of my firends took, and wouldn've helped me, 
+                    because I learned I actually loved programming and just wasn't exposed to a great initial enviornment
+                    so it was a decision I regreted. </li>
+    
+                    <li class="description">I was supposed to use all these to display some final projects using industrial level 
+                    machinery to make projects and robots. Like this one metal rocket piece I made with a plasma cutter,
+                    and a huge robot that was supposed to play ping pong, albeit very slowly. We had to stop becuase of 
+                    the pandemic, so at home I was taught <span class="important">Python and I did some rudimentary HTML and CSS by myself</span> that 
+                    might get me by for a week or two. </li>
+                </ol>
             </dd>
         </dl>
     </div>
 
     <br>
-    <div>
-        <h2 id="links">Links to my other webpages</h2>
+    <div class="sec">
+        <h2 id="links" class="sec_title">Links to my other webpages</h2>
         <dl>
-            <dt>Random Pages/Homeworks</dt>
+            <dt class="def_term">Random Pages/Homeworks</dt>
             <dd>
-                <li><a href="pages/test_link.html">This is an example link to another file</a></li>
-                <li><a href="homework/validated.html">This is the broken webpage fix excercise</a></li>
-                <li><a href="homework/recipe.html">This is the recipe.html CSS excercise</a></li>
+                <uL>
+                    <li class="description_link"><a href="pages/test_link.html">This is an example link to another file</a></li>
+                    <li class="description_link"><a href="homework/validated.html">This is the broken webpage fix excercise</a></li>
+                    <li class="description_link"><a href="homework/recipe.html">This is the recipe.html CSS excercise</a></li>
+                </uL>
             </dd>
 
-            <dt>Projects</dt>
+            <dt class="def_term">Projects</dt>
             <dd>
-                <li><a href="project1/index.html">Project - 1, Intro to HTML & CSS</a></li>
+                <ul>
+                <li class="description_link"><a href="project1/index.html">Project - 1, Intro to HTML & CSS</a></li>
+                </ul>
             </dd>
 
-            <dt>For fun</dt>
+            <dt class="def_term">For fun</dt>
             <dd>
-                <li><a href="pages/pokegar/index.html">A website I made for my brother</a></li>
+                <ul>
+                <li class="description_link"><a href="pages/pokegar/index.html">A website I made for my brother</a></li>
+                </ul>
             </dd>
         </dl>
     </div>
 
     <br>
-    <div>
-        <h2 id="images">Images about me</h2>
-            <h3>What I look like: </h3>
-            <img 
-            src="images/my_photo.jpg" 
-            width="500"
-            height="600"
-            alt="A picture of myself"
-            >
+    <div class="sec">
+        <h2 id="images" class="sec_title">Images about me</h2>
+            
+            <div class="image_block">
+                <h3 class="def_term">What I look like: </h3>
+                <figure class="my_images center_figcaption">
+                    <img src="images/my_photo.jpg" width="500" height="600" alt="A picture of myself">
+                    <figcaption>My yearbook photo</figcaption>
+                </figure>
+                <p class="description">When I took this picture I had just finished
+                    my U.S. history regents exam only 20 minutes ago.
+                </p>
+            </div>
             <br>
 
-            <h3>Where I am from: </h3>
-            <img 
-            src="images/nyc_from_above.png" 
-            width="902"
-            height="600"
-            alt="A picture of the NYC area from above at night"
-            >
+            <div class="image_block">
+                <h3 class="def_term">Where I am from: </h3>
+                <figure class="my_images center_figcaption">
+                    <img src="images/nyc_from_above.png" width="902" height="600" alt="A picture of the NYC area from above at night">
+                    <figcaption>An aerial view of the NYC Metro Area</figcaption>
+                </figure>
+                <p class="description">I think this was taken from a plane, too far to
+                    be form a helicopter
+                </p>
+            </div>
             <br>
 
-            <h3>Something cool about where I live: </h3>
-            <img 
-            src="images/empire_state_building.jpg" 
-            width="902"
-            height="600"
-            alt="A royalty free image of a midtown manhattan view of the empire empire state building
-            , but it's pretty old"
-            >
+            <div class="image_block">
+                <h3 class="def_term">Something cool about where I live: </h3>
+                <figure class="my_images center_figcaption">
+                    <img src="images/empire_state_building.jpg" width="902" height="600" alt="A royalty free image of a midtown manhattan view of the empire empire state building, but it's pretty old">
+                    <figcaption>The shot of the old Midtown skyline form 30 Rockefeller Center</figcaption>
+                </figure>
+                <p class="description">Just a regular, and obiosuly famous shot of midtown
+                    but this is out dated becuase the empire state buildign looks huge, in 2020
+                    however, the empire state build is dwarfed by others including One Vanderbilt, 
+                    111W57, and the Central Park Tower.
+                </p>
+            </div>
             <br>
 
-            <h3>What I'm feeling about college right now: </h3>
-            <img 
-            src="images/i_know_that_feel_bro.svg" 
-            width="902"
-            height="600"
-            alt="A very cool meme, that represents my emotions"
-            >
+            <div class="image_block">
+                <h3 class="def_term">What I'm feeling about college right now: </h3>
+                <figure class="my_images center_figcaption">
+                    <img src="images/i_know_that_feel_bro.svg" width="602" height="600" alt="A very cool meme, that represents my emotions">
+                    <figcaption>A meme found on reddit</figcaption>
+                </figure>
+                <p class="description">I'm feelign this becuase I want to do good in college
+                    unlike highschool where I just fooled around in class
+                    and waited until the last minute to start assignments,
+                    and study for tests. Breaking that habit is hard, espec
+                    ially in this pandemic.
+                </p>
+            </div>
             <br>
     </div>
-    <br>
-    <a href="#menu">Jump back to the top</a>
+
+    <div id="endlinks">
+        <a class="ending_links" href="#menu">Jump back to the top</a>
+    </div>
     </body>
 </html>
