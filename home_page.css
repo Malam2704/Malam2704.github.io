@@ -6,6 +6,15 @@
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+body{
+    margin: 2em;
+}
+
+#title_screen{
+    font-size: 3em;
+    margin-bottom: 0.5em;
+}
+
 .menu_item{
     display: inline;
     margin-right: 1em;
@@ -14,8 +23,21 @@
     color: green;
 }
 
+#menu{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: max-content;
+    margin-bottom: 1em;
+}
+
 a:link{
     color: green;
+}
+
+div{
+    margin-top: 1em;
+    margin-bottom: 1em;
 }
 
 a:visited{
@@ -30,24 +52,8 @@ a:active{
     color: blue;
 }
 
-#menu{
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    width: max-content;
-}
-
-#title_screen{
-    font-size: 3em;
-    margin-bottom: 0.5em;
-}
-
 .underlined{
     text-decoration: underline;
-}
-
-.sec{
-    margin: 2em;
 }
 
 .sec_title{
@@ -76,6 +82,7 @@ a:active{
 .my_images{
     float: right;
     clear: both;
+    
     margin-right: 0%;
 }
 
