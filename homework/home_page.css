@@ -1,0 +1,101 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    background-color:orange;
+    color: rebeccapurple;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+body{
+    margin: 2em;
+}
+
+#title_screen{
+    font-size: 3em;
+    margin-bottom: 0.5em;
+}
+
+.menu_item{
+    display: inline;
+    margin-right: 1em;
+    margin-left: 1em;
+    text-decoration: none;
+    color: green;
+}
+
+#menu{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: max-content;
+    margin-bottom: 1em;
+}
+
+div{
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+a:link{color: green;}
+a:visited{color: black;}
+a:hover{color: yellow;}
+a:active{color: blue;}
+
+.underlined{
+    text-decoration: underline;
+}
+
+.sec_title{
+    font-size: 200%;
+    text-decoration: underline;
+    margin-bottom: 0.25em;
+}
+
+.def_term{
+    text-decoration: underline;
+    margin-top: 1em;
+}
+
+.description{
+    margin-top: 1em;
+    margin-left: 2em;
+    margin-bottom: 1em;
+}
+
+.description_link{
+    margin-top: 0.5em;
+    margin-left: 2em;
+    margin-bottom: 0.5em;
+}
+
+.my_images{
+    float: right;
+    clear: both;
+    
+    margin-right: 0%;
+}
+
+.image_block{
+    height: 620px;
+}
+
+.center_figcaption{
+    text-align: center;
+    font-weight: 600;
+}
+
+#endlinks{
+    margin: 2em;
+    text-align: center;
+    font-size: 150%;
+}
+
+.ending_links{
+    text-decoration: none;
+    color: darkblue;
+}
+
+.important{
+    color:black;
+    background-color: lightblue;
+}
