@@ -31,26 +31,15 @@ body{
     margin-bottom: 1em;
 }
 
-a:link{
-    color: green;
-}
-
 div{
     margin-top: 1em;
     margin-bottom: 1em;
 }
 
-a:visited{
-    color: black;
-}
-
-a:hover{
-    color: yellow;
-}
-
-a:active{
-    color: blue;
-}
+a:link{color: green;}
+a:visited{color: black;}
+a:hover{color: yellow;}
+a:active{color: blue;}
 
 .underlined{
     text-decoration: underline;
@@ -109,4 +98,30 @@ a:active{
 .important{
     color:black;
     background-color: lightblue;
+}
+
+@media screen and (max-width:950px){
+    img, nav{
+        max-width: 100%;
+        margin: 0;
+    }
+    .menu_item{
+        
+        display: inline-block;
+        margin: 0.5em;
+        padding: 0.45em;
+        border-style: dashed;
+        border-color:black;
+    }
+    .image_block{
+        margin-top: 7em;
+        margin-bottom: 7em;
+    }
+    .def_term,h1,h2,h3{
+        text-align: center;
+    }
+    .description{
+        margin: 0;
+        margin-bottom: 4em;
+    }
 }
