@@ -1,7 +1,7 @@
 *{
     margin: 0%;
     padding: 0%;
-    background-color:orange;
+    background-color: black;
     color: rebeccapurple;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
@@ -19,8 +19,8 @@ body{
     display: inline;
     margin-right: 1em;
     margin-left: 1em;
-    text-decoration: none;
     color: green;
+    font-size: x-large;
 }
 
 #menu{
@@ -28,7 +28,7 @@ body{
     margin-left: auto;
     margin-right: auto;
     width: max-content;
-    margin-bottom: 1em;
+    margin-bottom: 2em;
 }
 
 div{
@@ -37,7 +37,7 @@ div{
 }
 
 a:link{color: green;}
-a:visited{color: black;}
+a:visited{color: yellowgreen;}
 a:hover{color: yellow;}
 a:active{color: blue;}
 
@@ -60,12 +60,14 @@ a:active{color: blue;}
     margin-top: 1em;
     margin-left: 2em;
     margin-bottom: 1em;
+    font-size: x-large;
 }
 
 .description_link{
     margin-top: 0.5em;
     margin-left: 2em;
     margin-bottom: 0.5em;
+    font-size: x-large;
 }
 
 .my_images{
@@ -97,7 +99,7 @@ a:active{color: blue;}
 
 .important{
     color:black;
-    background-color: lightblue;
+    background-color: yellowgreen;
 }
 
 @media screen and (max-width:950px){
@@ -123,5 +125,6 @@ a:active{color: blue;}
     .description{
         margin: 0;
         margin-bottom: 4em;
+        font-size: larger;
     }
 }
