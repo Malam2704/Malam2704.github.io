@@ -9,6 +9,15 @@ body{
     margin-right: 10em;
     background: #FAFF48;
 }
+
+.dark-mode {
+    background-color: black;
+}
+
+#darky:hover{
+    text-decoration: underline;
+}
+
 header{
     margin-right: auto;
     margin-left: auto;
@@ -56,7 +65,6 @@ a:active{color: blue;}
     display: flex;
     justify-content: center;
     text-align: center;
-    align-items: ;
 }
 .item2{
     grid-area: sideone;
@@ -78,6 +86,19 @@ a:active{color: blue;}
     margin-bottom: 1em;
     font-size: 120%;
 }
+
+.item7 a:hover{
+    text-decoration: none;
+}
+
+.item2:hover, .item3:hover, .item4:hover{ 
+    width: 40em;
+    border-style: solid;
+    border-width: .5em;
+    padding: 1em;
+    border-color:#de1d72;
+}
+
 .item5 h2,.item6 h2{
     margin-bottom: 0.4em;
 }
