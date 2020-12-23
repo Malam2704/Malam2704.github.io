@@ -48,7 +48,6 @@ a:active{color: blue;}
 .sec_title{
     font-size: 200%;
     text-decoration: underline;
-    margin-bottom: 0.25em;
 }
 
 .def_term{
@@ -102,7 +101,7 @@ a:active{color: blue;}
     background-color: yellowgreen;
 }
 
-@media screen and (max-width:950px){
+@media screen and (max-width:1180px){
     img, nav{
         max-width: 100%;
         margin: 0;
@@ -116,7 +115,6 @@ a:active{color: blue;}
         border-color:black;
     }
     .image_block{
-        margin-top: 7em;
         margin-bottom: 7em;
     }
     .def_term,h1,h2,h3{
