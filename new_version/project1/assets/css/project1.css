@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* References Css */
+table, table td{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    border: .5em solid #2F4B5E;
+    padding: 1em;
+    font-size: x-large;
+}
+
+/* body properties here */
+body{
+    background-color: #2C94DE;
+    font-size: 170%;
+    margin-right: 10%;
+    margin-left: 10%;
+}
+
+/* The anvigation settign CSS properties */
+nav ul{
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+    background-color: #2F4B5E;
+    padding: 1em;
+    font-size: large;
+    box-shadow: 0px 5px 10px #223031;
+    margin-bottom: 2em;
+}
+nav li{
+    text-align: center;
+    padding-left: 1em;
+    padding-right: 1em;
+    list-style-type: none;
+}
+nav a{
+    color: white;
+    text-decoration: none;
+}
+
+h2{
+    text-align: center;
+    font-size: 200%;
+    text-decoration: underline;
+    margin-bottom: 1em;
+}
+h3{text-decoration: underline;}
+
+img, iframe{
+    border: 1em solid #2F4B5E;
+    box-shadow: 0px 5px 10px #223031;
+}
+
+p{
+    margin: 1em;
+}
+.center_figure{
+    text-align: center;
+}
+.img_left{
+    float: left;
+    margin: 1em;
+}
+.img_right{
+    float: right;
+    margin: 1em;
+}
+iframe{
+    margin-top: 3em;
+}
+.centered{
+    text-align: center;
+}
+.underliner{
+    text-decoration: underline;
+}
