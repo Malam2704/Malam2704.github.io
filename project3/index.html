@@ -8,6 +8,12 @@
         <link href="assets/css/styles.css" rel="stylesheet" type="text/CSS">
 
         <script src='scripts/respond.min.js'></script>
+        <script>
+            function myFunction() {
+                var element = document.body;
+                element.classList.toggle("dark-mode");
+            }
+        </script>
     </head>
     <body id="my_body">
         <div class="wrapper">
@@ -27,12 +33,6 @@
                     <li><a href="#trailers">Trailer</a></li>
                     <li><a href="#info">More Info</a></li>
                     <li id="darky" onclick="myFunction()"><a href="">Dark mode</a></li>
-                    <script>
-                        function myFunction() {
-                        var element = document.body;
-                        element.classList.toggle("dark-mode");
-                        }
-                    </script>
                 </ul>
             </nav>
 
