@@ -1,0 +1,153 @@
+/* Basic removal of defualt features and addinhg a body tag to put my
+basis for the creation of the webpage */
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body{
+    margin-left: 10em;
+    margin-right: 10em;
+    background-color:#01D6E0;
+    border: 0.5em solid #005C61;
+}
+
+/* Just a nav guide to flex direte them in a row and increase the
+font size, space them apart evenly and remvoe the list symbol */
+nav{
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+    border-bottom: 0.5em solid #005C61;
+    margin-bottom: 2em;
+}
+nav ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: x-large;
+    font-weight: bold;
+    list-style-type: none;
+}
+nav li a{
+    text-decoration: none;
+}
+
+/* Link features for when the links are beign interacted with the user on */
+a:link{color: #005C61}
+a:visited{color: white;}
+a:hover{color: green; text-decoration: underline;}
+a:active{color: blue;}
+
+h1, h2{
+    font-size: xx-large;
+    text-decoration: underline;
+    margin-bottom: .25em;
+}
+
+li{
+    margin-top:.5em
+}
+
+/* Naming of the div section detailing my description, I organized it in 
+this format so it looks more organzied */
+.ht{grid-area: ht; text-align: center;}
+.p1{grid-area: p1;}
+.p2{grid-area: p2;}
+.p3{grid-area: p3;}
+.p4{grid-area: p4;}
+.picture{grid-area: picture; text-align: center;}
+#about{
+    display: grid;
+    grid-template-columns: 1fr 3fr 2fr 1fr;
+    grid-gap: 2em;
+    font-weight: 600;
+    font-size: large;
+    grid-template-areas: 
+    ". ht ht ."
+    '. p1 picture .'
+    '. p2 picture .'
+    '. p3 picture .'
+    '. p4 picture .';
+    padding-top: 3em;
+    padding-bottom: 3em;
+}
+
+/* The actual links portion beign indented right so it gives a more cleaner and professional
+look to it. Future descriptions will eb added to detail the websites */
+#exercises ol, #individual ol, #group ol{
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+}
+
+#exercises li, #individual li, #group li{
+    margin-right: 3em;
+    margin-left: 3em;
+}
+
+h1, #exercises h2, #individual h2, #group h2{
+    padding-left: 1em;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+    border: 10px solid #005C61;
+    box-shadow: black;
+}
+
+div{
+    margin: 3em;
+}
+
+/* Media query to adject the material so it's typically stacking top to bottom in
+-stead of left to right like the usual defaults */
+@media only screen and (max-width:1000px){
+    body{
+        margin: 0;
+        padding: 0;
+    }
+    nav ul{
+        flex-direction: column;
+        align-items: center;
+    }
+    nav ul li{
+        margin: .25em;
+        border: 0.2em solid #005C61;
+        padding: .25em;
+    }
+    .picture img{
+        border-radius: 50%;
+    }
+    #about{
+        display: grid;
+        grid-template-columns: 1fr ;
+        grid-gap: 2em;
+        font-weight: 900;
+        font-size: large;
+        grid-template-areas: 
+        "ht"
+        'picture'
+        'picture'
+        'picture'
+        'p1'
+        'p2'
+        'p3'
+        'p4';
+    }
+}
+
+/* If the user is on mobile no CSS transitions */
+@media only screen and (min-width:1000px){
+/* CSS transition to help the user read */
+    .p1:hover,.p2:hover,.p3:hover{
+        width: 40em;
+        border-style: solid;
+        border-width: .5em;
+        padding: 1em;
+        border-radius: 10px;
+        border-color: #005C61;
+        font-size: large;
+    }
+}
