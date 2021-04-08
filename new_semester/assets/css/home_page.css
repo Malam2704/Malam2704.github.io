@@ -16,6 +16,7 @@ body{
 /* Just a nav guide to flex direte them in a row and increase the
 font size, space them apart evenly and remvoe the list symbol */
 nav{
+    text-align: center;
     padding-top: 1.5em;
     padding-bottom: 1.5em;
     border-bottom: 0.5em solid #005C61;
@@ -24,29 +25,38 @@ nav{
 nav ul{
     display: flex;
     flex-direction: row;
+    text-align: center;
     justify-content: space-around;
     font-size: x-large;
     font-weight: bold;
     list-style-type: none;
 }
+nav li{
+    width: 100%;
+    padding: .5em;
+    margin: .5em;
+    border: 10px solid #005C61;
+    border-radius: 100px;
+}
 nav li a{
     text-decoration: none;
 }
 
+/* Spaces out all the lower lists */
+li{
+    padding: .5em;
+}
+
 /* Link features for when the links are beign interacted with the user on */
 a:link{color: #005C61}
-a:visited{color: white;}
-a:hover{color: green; text-decoration: underline;}
-a:active{color: blue;}
+a:visited{color: blue}
+nav li:hover{color: blue; border: 10px solid silver;}
+a:active{color: silver;}
 
 h1, h2{
     font-size: xx-large;
     text-decoration: underline;
     margin-bottom: .25em;
-}
-
-li{
-    margin-top:.5em
 }
 
 /* Naming of the div section detailing my description, I organized it in 
@@ -113,6 +123,7 @@ div{
         align-items: center;
     }
     nav ul li{
+        width: 70%;
         margin: .25em;
         border: 0.2em solid #005C61;
         padding: .25em;
@@ -141,8 +152,7 @@ div{
 /* If the user is on mobile no CSS transitions */
 @media only screen and (min-width:1000px){
 /* CSS transition to help the user read */
-    .p1:hover,.p2:hover,.p3:hover{
-        width: 40em;
+    #exercises:hover, #individual:hover, #group:hover{
         border-style: solid;
         border-width: .5em;
         padding: 1em;
@@ -150,4 +160,13 @@ div{
         border-color: #005C61;
         font-size: large;
     }
+}
+
+/* Email Form CSS */
+textarea{
+    resize: vertical;
+}
+
+.emailprocess .emailform{
+    border: none;
 }
