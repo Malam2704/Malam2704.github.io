@@ -9,12 +9,11 @@ body{
     background-color:#01D6E0;
     font-family: 'Montserrat', sans-serif;
     font-size: 1.2em;
-    color: #E6E6E6;
+    color: #005C61;
     
 }
 .topSection{
-    background-image: url("../images/login_background.jpg");
-    box-shadow: 0px 5px 10px #223031;
+    
 }
 .contentSection{
     
@@ -69,7 +68,7 @@ a:active{color: silver;}
 
 
 .titleShadow{
-    text-shadow: 5px 4px #000000;
+    /* text-shadow: 5px 4px #000000; */
     /* margin-bottom: 0.25em; */
 }
 
@@ -84,11 +83,16 @@ this format so it looks more organzied */
     box-shadow: 20px 20px 20px #223031;
 }
 
-.ht{grid-area: ht; text-align: center; margin-top: 1em;}
+.ht{grid-area: ht; 
+    text-shadow: 2px 5px #005c61; 
+    text-align: center; margin-top: 1em;}
 .p1{grid-area: p1;}
 .p2{grid-area: p2;}
 .p3{grid-area: p3;}
 .p4{grid-area: p4;}
+.p5{grid-area: p5;}
+.p6{grid-area: p6;}
+.p7{grid-area: p7;}
 .picture{grid-area: picture; text-align: center;}
 #about{
     color: #E6E6E6;
@@ -101,7 +105,10 @@ this format so it looks more organzied */
     '. p1 picture .'
     '. p2 picture .'
     '. p3 picture .'
-    '. p4 picture .';
+    '. p4 picture .'
+    '. p5 picture .'
+    '. p6 picture .'
+    '. p7 picture .';
     padding-top: 3em;
     padding-bottom: 3em;
     margin-bottom: 2em;
@@ -137,7 +144,6 @@ look to it. Future descriptions will be added to detail the next websites */
 } 
 
 .projectTitle{ grid-area: pjTitle; 
-    text-shadow: 2px 2px #000000;
     text-align: center;
     font-size: 4em;}
 .project1{ grid-area: pj1;}
@@ -379,7 +385,10 @@ footer{
         'p1'
         'p2'
         'p3'
-        'p4';
+        'p4'
+        'p5'
+        'p6'
+        'p7';
     }
 }
 
