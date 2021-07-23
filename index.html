@@ -26,7 +26,6 @@
             </ul>
             <div class="progress-bar" id="myBar"></div>
         </nav> -->
-        <!-- navbar -->
         <nav class="myNav">
             <input type="checkbox" id="check">
             <label for="check" class="checkbtn">
@@ -35,11 +34,11 @@
                 <span>&#9776;</span>
             </label>
             <label class="logo">Mohammed Alam</label>
-            <ul class="myNavList">
-                <li> <a class="navElement" href="#about">About</a> </li>
-                <li> <a class="navElement" href="#slideShowBox">Videos</a> </li>
-                <li> <a class="navElement" href="#projects">Projects</a> </li>
-                <li> <a class="navElement" href="emailform.php">Contact</a> </li>
+            <ul class="myNavList" id="myNavList">
+                <li> <a class="navElement" onclick=removeNav() href="#about">About</a> </li>
+                <li> <a class="navElement" onclick=removeNav() href="#slideShowBox">Videos</a> </li>
+                <li> <a class="navElement" onclick=removeNav() href="#projects">Projects</a> </li>
+                <li> <a class="navElement" onclick=removeNav() href="emailform.php">Contact</a> </li>
                 <li onclick="darkMode()" id="darkMode" style="cursor: pointer;"> <a class="navElement"
                         href="#">DarkMode</a> </li>
             </ul>
