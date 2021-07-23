@@ -6,10 +6,11 @@ basis for the creation of the webpage */
 }
 
 body{
-    background-color:#01D6E0;
+    background: rgb(1,214,224);
+    background: linear-gradient(90deg, rgba(1,214,224,1) 0%, rgba(0,92,97,1) 100%);
     font-family: 'Montserrat', sans-serif;
     font-size: 1.2em;
-    color: #005C61;
+    color: #E6E6E6;
 }
 
 /* This is the dark Mode toggles by darkMode() in js */
@@ -99,7 +100,9 @@ nav li a.active, nav li a:hover{
 a:link{color: #005C61; text-decoration: none;}
 nav li a:link{color: white;}
 a:visited{color: black; text-shadow: none;}
+nav li a:visited{color: white; text-shadow: none;}
 a:hover{color: lightskyblue;}
+.aProject a:link{color: #005c61;}
 a:active{color: silver;}
 
 
@@ -145,7 +148,7 @@ this format so it looks more organzied */
     '. p5 picture .'
     '. p6 picture .'
     '. p7 picture .';
-    padding-top: 5em;
+    padding-top: 4em;
     padding-bottom: 3em;
     margin-bottom: 2em;
 }
@@ -165,7 +168,12 @@ look to it. Future descriptions will be added to detail the next websites */
     box-shadow: 15px 10px #223031;
     border-radius: 20px;
 }
-
+.aProject:hover{
+    border: 10px solid #005C61;
+    background: #45DDE6;
+    color: #005C61;
+    transition: 0.25s;
+}
 .aProject img{
     width: 100%;
     border-top-right-radius: 10px;
@@ -475,7 +483,7 @@ textarea{
 }
 
 /* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
-@media (max-width: 952px) {
+@media (max-width: 1110px) {
     label.logo{
         font-size: 30px;
         padding-left: 50px;
@@ -483,8 +491,14 @@ textarea{
     .myNav .myNavList li a{
         font-size: 16px;
     }
+
+    /* When the Bruger Nav is here #about is pushed down */
+    #about{
+        padding-top: 6em;
+        font-size: 0.7em;
+    }
   }
-@media (max-width: 858px) {
+@media (max-width: 1058px) {
     .checkbtn{
         display: block;
     }
@@ -516,4 +530,9 @@ textarea{
     #check:checked ~ .myNavList{
         left: 0;
     }
-  }
+}
+@media (max-width: 450px) {
+    label.logo{
+        font-size: 19px;
+    }
+}
