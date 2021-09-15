@@ -412,6 +412,10 @@ header {
 .portfolio__item {
     background: var(--clr-accent);
     overflow: hidden;
+    margin: 1em;
+    border-radius: 30px;
+    border: 10px solid var(--clr-accent);
+    box-shadow: var(--bs);
 }
 
 .portfolio__img {
