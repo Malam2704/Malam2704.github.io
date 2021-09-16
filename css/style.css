@@ -197,21 +197,34 @@ header {
     transform: translateX(0);
     transition: .5s;
 }
-
 .nav-open .nav-toggle {
-    
     position: fixed;
 }
-
 .nav-open .nav-button {
     transform: rotate(1turn);
     transition: 0.3s;
 }
-
 .nav-open .nav-button::before {
     transform: rotate(90deg) translateX(-6px);
 }
+.nav-open .nav-button::after {
+    opacity: 0;
+}
 
+.nav-open .nav {
+    transform: translateX(0);
+    transition: .5s;
+}
+.nav-open .nav-toggle {
+    position: fixed;
+}
+.nav-open .nav-button {
+    transform: rotate(1turn);
+    transition: 0.3s;
+}
+.nav-open .nav-button::before {
+    transform: rotate(90deg) translateX(-6px);
+}
 .nav-open .nav-button::after {
     opacity: 0;
 }
@@ -408,10 +421,10 @@ header {
         opacity 250ms linear;
 }
 
-.portfolio__item:focus {
+/* .portfolio__item:focus {
     position: relative;
     z-index: 2;
-}
+} */
 
 .portfolio__img:hover,
 .portfolio__item:focus .portfolio__img {

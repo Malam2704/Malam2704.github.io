@@ -1,0 +1,11 @@
+Webstie to dos:
+
+Portfolio p1
+Portfolio p2
+Portfolio p3
+Portfolio p4
+Portfolio p5
+Portfolio p6
+Portfolio p7
+Portfolio p8
+Nav button roate also when closing
