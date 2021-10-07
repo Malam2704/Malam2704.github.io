@@ -271,6 +271,12 @@ header {
 
 .intro__img {
     box-shadow: var(--bs);
+    transform: scale(1);
+    transition: 0.5s;
+}
+.intro__img:hover{
+    transform: scale(1.1);
+    transition: 0.5s;
 }
 
 .section__subtitle--intro {
