@@ -147,7 +147,7 @@ header {
     transform: scale(1);
     transition: 0.5s;
 }
-.logo:hover{
+.logo:hover, .logo:active{
     transform: scale(1.15);
     transition: 0.5s;
 }
@@ -274,7 +274,7 @@ header {
     transform: scale(1);
     transition: 0.5s;
 }
-.intro__img:hover{
+.intro__img:hover, .intro__img:active{
     transform: scale(1.1);
     transition: 0.5s;
 }
@@ -374,7 +374,7 @@ header {
     transform: scale(1);
     transition: 0.5s;
 }
-.about-me__img:hover{
+.about-me__img:hover, .about-me__img:active{
     transform: scale(1.2);
     transition: 0.5s;
 }
