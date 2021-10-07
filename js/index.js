@@ -25,9 +25,8 @@ navLinks.forEach(link => {
 })
 
 function close_window() {
-    if (confirm("Close Window?")) {
-        close();
-    } else {
-        location.reload();
+    if (window.confirm('You sure you want to exit? Look around some more!')) {
+        window.location = 'https://google.com';
     }
+
 }
