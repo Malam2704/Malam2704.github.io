@@ -12,10 +12,6 @@ navToggle.addEventListener('click', () => {
         navToggleState = true;
     }
 });
-// navToggle.addEventListener('click', () => {
-//     document.body.classList.toggle('nav-open');
-//     document.getElementById('navthreebars').innerHTML = "&#x2715;";
-// });
 
 navLinks.forEach(link => {
     link.addEventListener('click', () => {
