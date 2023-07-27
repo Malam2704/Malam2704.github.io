@@ -1,13 +1,3 @@
-Webstie to dos:
+No more todos:
 
-Portfolio p1
-Portfolio p2
-Portfolio p3
-Portfolio p4
-Portfolio p5
-Portfolio p6
-Portfolio p7
-Portfolio p8
-Nav button roate also when closing
-
-Test to notice new commit
+Now updating to a new site
