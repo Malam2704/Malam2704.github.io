@@ -26,3 +26,31 @@ function close_window() {
     }
 
 }
+
+document.addEventListener('DOMContentLoaded', function () {
+    var currentIndex = 0;
+    var images = ['url("../img/RivianSlideShow/1.jpg")', 'url("../img/RivianSlideShow/2.jpg")', 'url("../img/RivianSlideShow/3.jpg")', 'url("../img/RivianSlideShow/4.jpg")', 'url("../img/RivianSlideShow/5.jpg")', 'url("../img/RivianSlideShow/6.jpg")', 'url("../img/RivianSlideShow/7.jpg")', 'url("../img/RivianSlideShow/8.jpg")']; // Add your image URLs here
+    var myServices = document.querySelector('.my-services');
+    var leftButton = document.querySelector('.my-services__button--left');
+    var rightButton = document.querySelector('.my-services__button--right');
+
+    function changeBackgroundImage() {
+        myServices.style.backgroundImage = images[currentIndex];
+    }
+
+    function nextImage() {
+        currentIndex = (currentIndex + 1) % images.length;
+        changeBackgroundImage();
+    }
+
+    function previousImage() {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        changeBackgroundImage();
+    }
+
+    leftButton.addEventListener('click', previousImage);
+    rightButton.addEventListener('click', nextImage);
+
+    setInterval(nextImage, 5000); // Change image every 5 seconds
+    changeBackgroundImage(); // Set the initial image
+});
