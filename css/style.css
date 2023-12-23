@@ -15,8 +15,8 @@
 
     --clr-light: #fff;
     --clr-dark: #303030;
-    --clr-dark-blue: #4b5a88;
-    --clr-accent: #7791cd;
+    --clr-dark-blue: #002547;
+    --clr-accent: #b9dBe4;
 
     --fs-h1: 3rem;
     --fs-h2: 2.25rem;
@@ -348,21 +348,29 @@ header {
     background-color: var(--clr-dark);
     background-image: url(../img/RivianRedTruck.jpeg);
     background-size: cover;
-    /* background-blend-mode: multiply; */
+    /* Cover the entire area of the div */
+    background-position: center;
+    /* Center the image */
+    background-repeat: no-repeat;
+    /* Prevent the image from repeating */
     color: var(--clr-light);
     text-align: center;
+    transition: background-image 0.05s ease-in-out;
+    /* Fade transition for background image */
 }
 
 .my-services .service {
     margin-bottom: 30px;
     margin: 50px;
     max-width: 500px;
+    font-weight: 600px;
     /* Adds 30px of space below each service section */
 }
 
-.my-services .service>h3 {
-    font-weight: 700;
-    /* Adds 30px of space below each service section */
+.my-services .service h3 {
+    font-size: 2.5rem;
+    /* Adjust the size as needed */
+    /* Additional styling options */
 }
 
 .section__title--services {
@@ -394,43 +402,26 @@ header {
 }
 
 .my-services {
-    background-color: var(--clr-dark);
-    background-image: url(../img/RivianRedTruck.jpeg);
-    /* Default background image */
+    position: relative;
+    overflow: hidden;
+    /* Hide overflow for sliding effect */
+}
+
+.my-services__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background-size: cover;
-    color: var(--clr-light);
-    text-align: center;
-    position: relative;
-    /* Needed for absolute positioning of buttons */
+    background-position: center;
+    transition: transform 1s ease;
+    /* Smooth transition for sliding */
 }
 
-.my-services .service {
-    margin-bottom: 30px;
-    margin: 50px;
-    max-width: 500px;
-}
-
-.my-services .service>h3 {
-    font-weight: 700;
-}
-
-.section__title--services {
-    color: var(--clr-accent);
-    position: relative;
-}
-
-.section__title--services::after {
-    content: '';
-    display: block;
-    width: 2em;
-    height: 1px;
-    margin: 0.5em auto 1em;
-    background: var(--clr-light);
-    opacity: 0.25;
-}
-
-.services {
-    margin-bottom: 4em;
+.my-services__background--next {
+    transform: translateX(100%);
+    /* Initially position off-screen */
 }
 
 /* Slideshow buttons */

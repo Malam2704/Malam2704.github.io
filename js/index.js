@@ -29,7 +29,7 @@ function close_window() {
 
 document.addEventListener('DOMContentLoaded', function () {
     var currentIndex = 0;
-    var images = ['url("../img/RivianSlideShow/1.jpg")', 'url("../img/RivianSlideShow/2.jpg")', 'url("../img/RivianSlideShow/3.jpg")', 'url("../img/RivianSlideShow/4.jpg")', 'url("../img/RivianSlideShow/5.jpg")', 'url("../img/RivianSlideShow/6.jpg")', 'url("../img/RivianSlideShow/7.jpg")', 'url("../img/RivianSlideShow/8.jpg")']; // Add your image URLs here
+    var images = ['url(../img/RivianRedTruck.jpeg)', 'url("../img/RivianSlideShow/1.jpg")', 'url("../img/RivianSlideShow/2.jpg")', 'url("../img/RivianSlideShow/3.jpg")', 'url("../img/RivianSlideShow/4.jpg")', 'url("../img/RivianSlideShow/5.jpg")', 'url("../img/RivianSlideShow/6.jpg")', 'url("../img/RivianSlideShow/7.jpg")', 'url("../img/RivianSlideShow/8.jpg")']; // Add your image URLs here
     var myServices = document.querySelector('.my-services');
     var leftButton = document.querySelector('.my-services__button--left');
     var rightButton = document.querySelector('.my-services__button--right');
