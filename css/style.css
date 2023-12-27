@@ -521,6 +521,10 @@ header {
         padding-right: calc(200px + 4em);
     }
 
+    .section__subtitle--about-work {
+        padding-left: 11em;
+    }
+
     .about-work__body {
         grid-area: text;
     }
