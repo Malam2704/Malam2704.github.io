@@ -532,8 +532,12 @@ header {
 }
 
 .portfolio__img {
-    transition:
-        transform 750ms cubic-bezier(.5, 0, .5, 1),
+    width: 354.2px;
+    height: 354.2px;
+    object-fit: cover;
+    /* This will ensure the images are resized in a way that maintains their aspect ratio */
+
+    transition: transform 750ms cubic-bezier(.5, 0, .5, 1),
         opacity 250ms linear;
 }
 
