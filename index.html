@@ -119,26 +119,133 @@
             text-align: center;
         }
 
-        /* Experience Cards */
         .experience-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
         }
 
         .experience-card {
             padding: 2rem;
-            transition: transform 0.3s;
+            transition: transform 0.3s ease;
+            border-radius: 16px;
         }
 
-        .experience-card:hover {
-            transform: translateY(-5px);
+        .experience-header {
+            display: grid;
+            grid-template-columns: auto 1fr auto;
+            gap: 1.5rem;
+            align-items: center;
+            margin-bottom: 1.5rem;
         }
 
-        .experience-card h3 {
-            font-size: 1.5rem;
+        .company-logo {
+            width: 64px;
+            height: 64px;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .company-logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .experience-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .experience-card {
+            padding: 1.5rem;
+            transition: transform 0.3s ease;
+            border-radius: 12px;
+        }
+
+        .experience-header {
+            display: grid;
+            grid-template-columns: auto 1fr auto;
+            gap: 1rem;
+            align-items: start;
             margin-bottom: 1rem;
+        }
+
+        .company-logo {
+            width: 48px;
+            height: 48px;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .company-logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .experience-title {
+            flex-grow: 1;
+        }
+
+        .experience-title h3 {
+            font-size: 1.25rem;
+            color: #fff;
+            margin-bottom: 0.25rem;
+        }
+
+        .experience-title h4 {
+            font-size: 1rem;
             color: #38bdf8;
+            margin: 0;
+        }
+
+        .experience-meta {
+            text-align: right;
+        }
+
+        .experience-date {
+            font-size: 0.9rem;
+            color: #94a3b8;
+            margin-bottom: 0.25rem;
+        }
+
+        .experience-location {
+            font-size: 0.85rem;
+            color: #94a3b8;
+        }
+
+        .experience-description {
+            font-size: 0.95rem;
+            line-height: 1.5;
+            margin-top: 0.75rem;
+            color: #94a3b8;
+            max-width: 90%;
+        }
+
+        @media (max-width: 768px) {
+            .experience-card {
+                padding: 1.25rem;
+            }
+
+            .experience-header {
+                grid-template-columns: auto 1fr;
+                gap: 0.75rem;
+            }
+
+            .experience-meta {
+                grid-column: 2;
+                text-align: left;
+                margin-top: 0.5rem;
+            }
+
+            .company-logo {
+                width: 40px;
+                height: 40px;
+            }
         }
 
         /* Projects Grid */
@@ -293,24 +400,171 @@
             <h2 class="section-title">Experience</h2>
             <div class="experience-grid">
                 <div class="experience-card glass">
-                    <h3>Software Engineer Co-Op & ML Co-Op</h3>
-                    <p>Rivian Automotive</p>
-                    <p>January 2024 - August 2024</p>
-                    <ul>
-                        <li>Built 3D CAD modeling app saving $300K+</li>
-                        <li>Cut load times by 97.4% with manufacturing app</li>
-                        <li>Enabled natural language search with in-house LLM</li>
-                    </ul>
+                    <div class="experience-header">
+                        <div class="company-logo">
+                            <img src="img/rivian.svg" alt="Rivian Logo">
+                        </div>
+                        <div class="experience-title">
+                            <h3>Software Engineer Co-Op & ML Co-Op</h3>
+                            <h4>Rivian Automotive</h4>
+                        </div>
+                        <div class="experience-meta">
+                            <div class="experience-date">January 2024 - August 2024</div>
+                            <div class="experience-location">Normal, IL</div>
+                        </div>
+                    </div>
+                    <div class="experience-description">
+                        Unified the manufacturing process with an app that cut load times by 97.4% and enabled live
+                        access to data, replacing expensive external software, built with Typescript React, Node, AWS, &
+                        C#
+                    </div>
                 </div>
+
                 <div class="experience-card glass">
-                    <h3>Software Engineer Intern</h3>
-                    <p>Fidelity Investments</p>
-                    <p>June 2023 - August 2023</p>
-                    <ul>
-                        <li>Designed patented Securities Exchange platform</li>
-                        <li>Built full-stack trading platform</li>
-                        <li>Founded NLP Research Project</li>
-                    </ul>
+                    <div class="experience-header">
+                        <div class="company-logo">
+                            <img src="img/rivian.svg" alt="Rivian Logo">
+                        </div>
+                        <div class="experience-title">
+                            <h3>Software Engineer Co-Op & ML Co-Op</h3>
+                            <h4>Rivian Automotive</h4>
+                        </div>
+                        <div class="experience-meta">
+                            <div class="experience-date">January 2024 - August 2024</div>
+                            <div class="experience-location">Normal, IL</div>
+                        </div>
+                    </div>
+                    <div class="experience-description">
+                        Unified the manufacturing process with an app that cut load times by 97.4% and enabled live
+                        access to data, replacing expensive external software, built with Typescript React, Node, AWS, &
+                        C#
+                    </div>
+                </div>
+
+                <div class="experience-card glass">
+                    <div class="experience-header">
+                        <div class="company-logo">
+                            <img src="img/fidelity.png" alt="Fidelity Logo">
+                        </div>
+                        <div class="experience-title">
+                            <h3>Software Engineer Co-Op & ML Co-Op</h3>
+                            <h4>Rivian Automotive</h4>
+                        </div>
+                        <div class="experience-meta">
+                            <div class="experience-date">January 2024 - August 2024</div>
+                            <div class="experience-location">Normal, IL</div>
+                        </div>
+                    </div>
+                    <div class="experience-description">
+                        Unified the manufacturing process with an app that cut load times by 97.4% and enabled live
+                        access to data, replacing expensive external software, built with Typescript React, Node, AWS, &
+                        C#
+                    </div>
+                </div>
+
+                <div class="experience-card glass">
+                    <div class="experience-header">
+                        <div class="company-logo">
+                            <img src="img/amplify.jpg" alt="Amplify Logo">
+                        </div>
+                        <div class="experience-title">
+                            <h3>Software Engineer Co-Op & ML Co-Op</h3>
+                            <h4>Rivian Automotive</h4>
+                        </div>
+                        <div class="experience-meta">
+                            <div class="experience-date">January 2024 - August 2024</div>
+                            <div class="experience-location">Normal, IL</div>
+                        </div>
+                    </div>
+                    <div class="experience-description">
+                        Unified the manufacturing process with an app that cut load times by 97.4% and enabled live
+                        access to data, replacing expensive external software, built with Typescript React, Node, AWS, &
+                        C#
+                    </div>
+                </div>
+
+                <div class="experience-card glass">
+                    <div class="experience-header">
+                        <div class="company-logo">
+                            <img src="img/liberty.jpg" alt="Fidelity Logo">
+                        </div>
+                        <div class="experience-title">
+                            <h3>Software Engineer Co-Op & ML Co-Op</h3>
+                            <h4>Rivian Automotive</h4>
+                        </div>
+                        <div class="experience-meta">
+                            <div class="experience-date">January 2024 - August 2024</div>
+                            <div class="experience-location">Normal, IL</div>
+                        </div>
+                    </div>
+                    <div class="experience-description">
+                        Unified the manufacturing process with an app that cut load times by 97.4% and enabled live
+                        access to data, replacing expensive external software, built with Typescript React, Node, AWS, &
+                        C#
+                    </div>
+                </div>
+
+                <div class="experience-card glass">
+                    <div class="experience-header">
+                        <div class="company-logo">
+                            <img src="img/nycoti.jpg" alt="Fidelity Logo">
+                        </div>
+                        <div class="experience-title">
+                            <h3>Software Engineer Co-Op & ML Co-Op</h3>
+                            <h4>Rivian Automotive</h4>
+                        </div>
+                        <div class="experience-meta">
+                            <div class="experience-date">January 2024 - August 2024</div>
+                            <div class="experience-location">Normal, IL</div>
+                        </div>
+                    </div>
+                    <div class="experience-description">
+                        Unified the manufacturing process with an app that cut load times by 97.4% and enabled live
+                        access to data, replacing expensive external software, built with Typescript React, Node, AWS, &
+                        C#
+                    </div>
+                </div>
+
+                <div class="experience-card glass">
+                    <div class="experience-header">
+                        <div class="company-logo">
+                            <img src="img/idtech.jpg" alt="Fidelity Logo">
+                        </div>
+                        <div class="experience-title">
+                            <h3>Software Engineer Co-Op & ML Co-Op</h3>
+                            <h4>Rivian Automotive</h4>
+                        </div>
+                        <div class="experience-meta">
+                            <div class="experience-date">January 2024 - August 2024</div>
+                            <div class="experience-location">Normal, IL</div>
+                        </div>
+                    </div>
+                    <div class="experience-description">
+                        Unified the manufacturing process with an app that cut load times by 97.4% and enabled live
+                        access to data, replacing expensive external software, built with Typescript React, Node, AWS, &
+                        C#
+                    </div>
+                </div>
+
+                <div class="experience-card glass">
+                    <div class="experience-header">
+                        <div class="company-logo">
+                            <img src="img/rit-tiger.jpg" alt="Fidelity Logo">
+                        </div>
+                        <div class="experience-title">
+                            <h3>Software Engineer Co-Op & ML Co-Op</h3>
+                            <h4>Rivian Automotive</h4>
+                        </div>
+                        <div class="experience-meta">
+                            <div class="experience-date">January 2024 - August 2024</div>
+                            <div class="experience-location">Normal, IL</div>
+                        </div>
+                    </div>
+                    <div class="experience-description">
+                        Unified the manufacturing process with an app that cut load times by 97.4% and enabled live
+                        access to data, replacing expensive external software, built with Typescript React, Node, AWS, &
+                        C#
+                    </div>
                 </div>
             </div>
         </section>
