@@ -2,284 +2,485 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Moe Alam Portfolio Website</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
-        integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />
+    <title>Your Name - Software Engineer</title>
+    <style>
+        :root {
+            --glass-bg: rgba(255, 255, 255, 0.1);
+            --glass-border: rgba(255, 255, 255, 0.2);
+        }
 
-    <!-- Update these with your own fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap"
-        rel="stylesheet">
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
 
-    <!-- load favicon image in browser tab-->
-    <link rel="icon" href="assets/img/mylogo.png">
+        body {
+            background: linear-gradient(45deg, #0f172a, #1e293b);
+            color: #fff;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
 
-    <link rel="stylesheet" href="css/style.css">
+        .blur-circle {
+            position: fixed;
+            border-radius: 50%;
+            filter: blur(100px);
+            z-index: -1;
+        }
 
+        .blur-1 {
+            width: 500px;
+            height: 500px;
+            background: rgba(56, 189, 248, 0.3);
+            top: -200px;
+            left: -200px;
+        }
+
+        .blur-2 {
+            width: 400px;
+            height: 400px;
+            background: rgba(139, 92, 246, 0.3);
+            bottom: -100px;
+            right: -100px;
+        }
+
+        .glass {
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Header Styles */
+        header {
+            padding: 2rem 0;
+        }
+
+        .hero {
+            padding: 4rem 2rem;
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(to right, #38bdf8, #818cf8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #94a3b8;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Social Links */
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+
+        .social-link {
+            width: 45px;
+            height: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s;
+        }
+
+        .social-link:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Section Styles */
+        section {
+            margin-bottom: 4rem;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        /* Experience Cards */
+        .experience-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .experience-card {
+            padding: 2rem;
+            transition: transform 0.3s;
+        }
+
+        .experience-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .experience-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #38bdf8;
+        }
+
+        /* Projects Grid */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .project-card {
+            height: 400px;
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            transform-style: preserve-3d;
+            opacity: 0;
+            transform: translateY(50px);
+            overflow: hidden;
+        }
+
+        .project-card.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px) rotateX(5deg) rotateY(5deg);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        }
+
+        .project-image {
+            width: 100%;
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+            transition: transform 0.5s ease;
+        }
+
+        .project-card:hover .project-image {
+            transform: scale(1.05);
+        }
+
+        .project-content {
+            padding: 1.5rem;
+        }
+
+        .project-title {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: #38bdf8;
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .tech-tag {
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            background: rgba(56, 189, 248, 0.1);
+            border: 1px solid rgba(56, 189, 248, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .tech-tag:hover {
+            background: rgba(56, 189, 248, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .show-more-container {
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .show-more-btn {
+            padding: 1rem 2.5rem;
+            font-size: 1.1rem;
+            background: linear-gradient(135deg, #38bdf8, #818cf8);
+            border: none;
+            border-radius: 25px;
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .show-more-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Skills Section */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 1rem;
+            text-align: center;
+        }
+
+        .skill-item {
+            padding: 1rem;
+            transition: transform 0.3s;
+        }
+
+        .skill-item:hover {
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .container {
+                padding: 1rem;
+            }
+
+            .projects-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <header>
-        <div class="logo">
-            <a onclick="close_window();">
-                <img src="img/mylogo.png" alt="">
-            </a>
-        </div>
-        <button class="nav-toggle nav-button" aria-label="toggle navigation">
-            <span id="navthreebars">&#9776;</span>
-        </button>
-        <nav class="nav">
-            <ul class="nav__list">
-                <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
-                <li class="nav__item"><a href="#services" class="nav__link">What I do</a></li>
-                <li class="nav__item"><a href="#about" class="nav__link">About me</a></li>
-                <li class="nav__item"><a href="#work" class="nav__link">Featured Projects</a></li>
-            </ul>
-        </nav>
-    </header>
+    <div class="blur-circle blur-1"></div>
+    <div class="blur-circle blur-2"></div>
 
-    <!-- Introduction -->
-    <section class="intro" id="home">
-        <h1 class="section__title section__title--intro">
-            Hi, I'm <strong>Mohammed Alam</strong>
-        </h1>
-        <p class="section__subtitle section__subtitle--intro">Software Engineer @ Rivian</p>
-        <img class="intro__img" src="img/my_photo.jpg" alt="a picture of Me Smith smiling">
-    </section>
+    <div class="container">
+        <header>
+            <div class="hero glass">
+                <h1>Mohammed Alam</h1>
+                <p>Software Engineer at Rivian crafting innovative manufacturing solutions</p>
+                <div class="social-links">
+                    <a href="https://github.com/Malam2704" class="social-link glass">
+                        <!-- GitHub SVG remains same -->
+                    </a>
+                    <a href="https://www.linkedin.com/in/moe-alam" class="social-link glass">
+                        <!-- LinkedIn SVG remains same -->
+                    </a>
+                    <a href="mailto:moeal2144@gmail.com" class="social-link glass">
+                        <!-- Email SVG remains same -->
+                    </a>
+                </div>
+            </div>
+        </header>
 
+        <section id="experience">
+            <h2 class="section-title">Experience</h2>
+            <div class="experience-grid">
+                <div class="experience-card glass">
+                    <h3>Software Engineer Co-Op & ML Co-Op</h3>
+                    <p>Rivian Automotive</p>
+                    <p>January 2024 - August 2024</p>
+                    <ul>
+                        <li>Built 3D CAD modeling app saving $300K+</li>
+                        <li>Cut load times by 97.4% with manufacturing app</li>
+                        <li>Enabled natural language search with in-house LLM</li>
+                    </ul>
+                </div>
+                <div class="experience-card glass">
+                    <h3>Software Engineer Intern</h3>
+                    <p>Fidelity Investments</p>
+                    <p>June 2023 - August 2023</p>
+                    <ul>
+                        <li>Designed patented Securities Exchange platform</li>
+                        <li>Built full-stack trading platform</li>
+                        <li>Founded NLP Research Project</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
 
-    <!-- My services -->
-    <section class="my-services" id="services">
-        <button class="my-services__button my-services__button--left">&lt;</button>
-        <button class="my-services__button my-services__button--right">&gt;</button>
+        <section id="projects">
+            <h2 class="section-title">Projects</h2>
+            <div class="projects-grid" id="projectsGrid"></div>
+            <div class="show-more-container">
+                <button class="show-more-btn" id="showMoreBtn">Show All Projects</button>
+            </div>
+        </section>
 
-        <h2 class="section__title section__title--services">What I do</h2>
-        <div class="services">
-            <div class="service">
-                <h3>Design + Development</h3>
-                <p>With my knowledge outside of class, I tinkered with a few technologies such as MySQL, PHP, and
-                    various
-                    various js libraries, so with that knowledge I decided to make some software projects, featured <a
-                        href="#work" style="text-decoration:none">below.</a>
-                    Creating very server heavy processes liek a login - system, an online Mario game, and a few others.
-                </p>
-            </div> <!-- / service -->
+        <section id="skills">
+            <h2 class="section-title">Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-item glass">Python</div>
+                <div class="skill-item glass">JavaScript</div>
+                <div class="skill-item glass">TypeScript</div>
+                <div class="skill-item glass">Java</div>
+                <div class="skill-item glass">React</div>
+                <div class="skill-item glass">Node.js</div>
+                <div class="skill-item glass">AWS</div>
+                <div class="skill-item glass">Docker</div>
+            </div>
+        </section>
+    </div>
 
-            <div class="service">
-                <h3>Research</h3>
-                <p>I love researching topics for fun. Each week I find a new topic that amuses me, and I just dive
-                    deep in, learning all about it. Infact I know all the world's natins & their capitals, the 100
-                    tallest buildings, how each state voted in all presidential elections(which I have written papers
-                    on), and a bunch more info I can tell you in person.
-                </p>
-            </div> <!-- / service -->
+    <script>
+        // Sample project data
+        const projects = [
+            {
+                title: "Music Soulmate",
+                description: "Full-stack music taste-matching app using Spotify API and custom algorithm for friend recommendations",
+                image: "/api/placeholder/300/200",  // Replace with your image
+                tech: ["Next.js", "React", "MongoDB", "Python", "Spotify API"]
+            },
+            {
+                title: "Manufacturing Process App",
+                description: "Unified manufacturing app that cut load times by 97.4% and enabled live data access",
+                image: "/api/placeholder/300/200",
+                tech: ["TypeScript", "React", "Node.js", "AWS", "C#"]
+            },
+            {
+                title: "Securities Trading Platform",
+                description: "Exchange platform for tokenized securities with Angular and Oracle SQL",
+                image: "/api/placeholder/300/200",
+                tech: ["Angular", "Oracle SQL", "Solidity"]
+            },
+            {
+                title: "Uber Insurance API",
+                description: "REST API for Uber's driver insurance data using AWS services",
+                image: "/api/placeholder/300/200",
+                tech: ["AWS Lambda", "API Gateway", "Aurora"]
+            },
+            {
+                title: "Data Aggregation API",
+                description: "Java Spring Boot REST API aggregating 23 NYC data sources",
+                image: "/api/placeholder/300/200",
+                tech: ["Java Spring Boot", "Angular", "REST API"]
+            }
+            // Add more of your projects here
+        ];
 
-            <div class="service">
-                <h3>Data Visualization</h3>
-                <p>My passion for learning has extended to numbers, and I want to share that information
-                    through visualizations such as Maps & Graphs. I have made several maps on topics such as
-                    the number of skyscrapers per U.S. State. My maps have won awards, reaching #1 on
-                    Reddit and included in the Judicial Appointments divison of the Ohio Rotary Club.
-                </p>
-            </div> <!-- / service -->
-        </div> <!-- / services -->
+        // Continue from the previous code...
 
-        <a href="#work" class="btn">My Featured Projects</a>
-    </section>
+        const projectsGrid = document.getElementById('projectsGrid');
+        const showMoreBtn = document.getElementById('showMoreBtn');
+        let showingAll = false;
 
+        function createProjectCard(project) {
+            const card = document.createElement('div');
+            card.className = 'project-card glass';
 
-    <!-- About me -->
-    <section class="about-me" id="about">
-        <h2 class="section__title section__title--about">Who I am</h2>
-        <p class="section__subtitle section__subtitle--about">Software Engineering Student from New York, NY</p>
+            card.innerHTML = `
+                <div class="project-image" style="background-image: url('${project.image}')"></div>
+                <div class="project-content">
+                    <h3 class="project-title">${project.title}</h3>
+                    <p class="project-description">${project.description}</p>
+                    <div class="tech-stack">
+                        ${project.tech.map(tech => `<span class="tech-tag">${tech}</span>`).join('')}
+                    </div>
+                </div>
+            `;
 
-        <div class="about-me__body">
-            <!-- <a href="https://fidelity.com/">  -->
-            <p>I am currently work as a Software Engineer at Rivian working on the Automation Controls Team. My team in
-                the org helps to automate factory manufacturing processes for our cars
-            </p>
-            <p> I am a 4th (out of 5th) year undergraduate student from the Rochester Institute of Technology
-                (RIT).
-                Graduating May 2025 and am active on on-cmapus organizations, such as being the previous
-                Tech Lead
-                of the Society of Software Engineers, a member of RIT's Computer Science House, and a member of RIT's
-                chapter
-                of the google student developers.
-            </p>
-        </div>
+            return card;
+        }
 
-        <img class="about-me__img" src="img/mohammed-alam-02.jpg" alt="Me leaning against a bus">
-    </section>
+        function initializeProjects(showAll = false) {
+            projectsGrid.innerHTML = '';
+            const displayProjects = showAll ? projects : projects.slice(0, 5);
 
-    <!-- My Past -->
-    <section class="about-work">
-        <h2 class="section__title section__title--about">Where I Worked</h2>
-        <p class="section__subtitle section__subtitle--about section__subtitle--about-work">What Led me to Rivian</p>
-        <img class="about-work__img" src="img/mebrookfield.png" alt="Me leaning against a bus">
-        <div class="about-work__body">
-            <p>Last Summer (2023) I worked as a Software Engineering Intern at Fidelity
-                Investments, creating a tokenized securities fundraising platform. A revolutionary idea,
-                breaking the traditional stocks & securities industry. Where companies(Issuers) ready to
-                IPO put their tokens on the exchange, while Investors get to choose a plethora of tokens
-                minted by several companies to chose to IPO with tokens instead of stocks
-            </p>
-            <p>
-                Previously I was with Amplify Education & Desmos an education
-                Software Company working on a project that uses Vocie Recognition to grade and instruct K-8
-                on their reading levels. In Addition to continuing with my API work and backend skills. Creating new
-                data pipelines for exisitng projects used by our customers, primarily private schools.
-            </p>
-            <p>
-                I was also with Liberty Mutual Insurance, helping construct an API for Uber that handled their
-                driver/accidental Insurance Data.
-            </p>
-        </div>
-    </section>
+            displayProjects.forEach((project, index) => {
+                const card = createProjectCard(project);
+                projectsGrid.appendChild(card);
+                // Add staggered animation delay
+                setTimeout(() => card.classList.add('visible'), index * 100);
+            });
+        }
 
-    <!-- My Work -->
-    <section class="my-work" id="work">
-        <h2 class="section__title section__title--work">My Featured Projects</h2>
-        <p class="section__subtitle section__subtitle--work">A selection of my range of work</p>
+        showMoreBtn.addEventListener('click', () => {
+            showingAll = !showingAll;
+            initializeProjects(showingAll);
+            showMoreBtn.textContent = showingAll ? 'Show Less' : 'Show All Projects';
 
-        <div class="portfolio">
-            <!-- Portfolio item 01 -->
-            <!-- <a href="https://people.rit.edu/ma3655/DvR/" class="portfolio__item"> -->
-            <img src="img/dvr_image.jpg" alt="" class="portfolio__img">
-            <!-- </a> -->
+            if (!showingAll) {
+                window.scrollTo({
+                    top: projectsGrid.offsetTop - 100,
+                    behavior: 'smooth'
+                });
+            }
+        });
 
-            <!-- The CSS Survival Guide -->
-            <!-- <a href="https://people.rit.edu/ma3655/ISTE240/altgroup/" class="portfolio__item"> -->
-            <img src="img/Projects/EasyLearning.jpg" alt="" class="portfolio__img">
-            <!-- </a> -->
+        // Handle mouse movement for 3D effect
+        document.addEventListener('mousemove', (e) => {
+            const cards = document.querySelectorAll('.project-card');
+            cards.forEach(card => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
 
-            <!-- The CSS Survival Guide -->
-            <!-- <a href="https://people.rit.edu/ma3655/ISTE240/altgroup/" class="portfolio__item"> -->
-            <img src="img/css_survival_guide_image.jpg" alt="" class="portfolio__img">
-            <!-- </a> -->
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
 
-            <!-- Mario Game -->
-            <!-- <a href="https://people.rit.edu/ma3655/Mario/" class="portfolio__item"> -->
-            <img src="img/mario_game_image.jpg" alt="" class="portfolio__img">
-            <!-- </a> -->
+                const rotateX = (y - centerY) / 20;
+                const rotateY = (centerX - x) / 20;
 
-            <!-- Web Calculator -->
-            <!-- <a href="https://people.rit.edu/ma3655/calculator" class="portfolio__item"> -->
-            <img src="img/calculator_image.jpg" alt="" class="portfolio__img">
-            <!-- </a> -->
+                card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(${card.classList.contains('visible') ? '0' : '50px'})`;
+            });
+        });
 
-            <!-- Rick And Morty character generator -->
-            <!-- <a href="https://people.rit.edu/ma3655/RMG/" class="portfolio__item"> -->
-            <img src="img/rick_and_morty_generator_image.jpg" alt="" class="portfolio__img">
-            <!-- </a> -->
+        // Reset card transform when mouse leaves
+        document.addEventListener('mouseleave', () => {
+            const cards = document.querySelectorAll('.project-card');
+            cards.forEach(card => {
+                card.style.transform = card.classList.contains('visible') ?
+                    'translateY(0)' : 'translateY(50px)';
+            });
+        });
 
-            <!-- AQW Bots -->
-            <!-- <a href="https://github.com/Malam2704/AQW-Bots" class="portfolio__item"> -->
-            <img src="img/aqw_project_image.jpg" alt="" class="portfolio__img">
-            <!-- </a> -->
+        // Intersection Observer for scroll animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
 
-            <!-- Portfolio item 06 -->
-            <!-- <a href="https://people.rit.edu/ma3655/ISTE240/project1/" class="portfolio__item"> -->
-            <img src="img/welcometonyc.jpg" alt="" class="portfolio__img">
-            <!-- </a> -->
+        // Initialize the page
+        initializeProjects(false);
 
-            <!-- Portfolio item 07 -->
-            <!-- <a href="https://people.rit.edu/ma3655/ISTE240/last_semester/project3/" class="portfolio__item"> -->
-            <img src="img/cyberpunk.jpg" alt="" class="portfolio__img">
-            <!-- </a> -->
+        // Observe all project cards for scroll animations
+        document.querySelectorAll('.project-card').forEach(card => {
+            observer.observe(card);
+        });
 
-            <!-- Portfolio item 08 -->
-            <!-- <a href="https://people.rit.edu/ma3655/ISTE240/last_semester/midterm2201/" class="portfolio__item"> -->
-            <img src="img/Projects/Fitcheck.jpg" alt="" class="portfolio__img">
-            <!-- </a> -->
+        // Handle parallax effect for blur circles
+        document.addEventListener('mousemove', (e) => {
+            const circles = document.querySelectorAll('.blur-circle');
+            const mouseX = e.clientX / window.innerWidth;
+            const mouseY = e.clientY / window.innerHeight;
 
-            <!-- Portfolio item 09 -->
-            <!-- <a href="#" class="portfolio__item"> -->
-            <img src="img/Projects/GetABike.jpg" alt="" class="portfolio__img">
-            <!-- </a> -->
-
-            <!-- Portfolio item 10 -->
-            <!-- <a href="#" class="portfolio__item"> -->
-            <img src="img/Projects/MoodTracker.jpg" alt="" class="portfolio__img">
-            <!-- </a> -->
-
-            <!-- Portfolio item 11 -->
-            <!-- <a href="#" class="portfolio__item"> -->
-            <img src="img/Projects/Mornin.jpg" alt="" class="portfolio__img">
-            <!-- </a> -->
-
-            <!-- Portfolio item 12 -->
-            <!-- <a href="#" class="portfolio__item"> -->
-            <img src="img/Projects/OrcManager.jpg" alt="" class="portfolio__img">
-            <!-- </a> -->
-
-            <!-- Portfolio item 13 -->
-            <!-- <a href="#" class="portfolio__item"> -->
-            <img src="img/Projects/Penpal.jpg" alt="" class="portfolio__img">
-            <!-- </a> -->
-
-            <!-- Portfolio item 14 -->
-            <!-- <a href="#" class="portfolio__item"> -->
-            <img src="img/Projects/RITHousing.jpg" alt="" class="portfolio__img">
-            <!-- </a> -->
-
-            <!-- Portfolio item 15 -->
-            <!-- <a href="#" class="portfolio__item"> -->
-            <img src="img/Projects/Wisely.jpg" alt="" class="portfolio__img">
-            <!-- </a> -->
-
-            <!-- Portfolio item 16 -->
-            <!-- <a href="#" class="portfolio__item"> -->
-            <img src="img/Projects/Countable.jpg" alt="" class="portfolio__img">
-            <!-- </a> -->
-
-
-            <!-- Portfolio item 08 -->
-            <!-- <a href="https://people.rit.edu/ma3655/ISTE240/last_semester/midterm2201/" class="portfolio__item"> -->
-            <!-- <img src="img/wyoming_project_image.jpg" alt="" class="portfolio__img"> -->
-            <!-- </a> -->
-
-            <!-- Portfolio item 09 -->
-            <!-- <a href="https://people.rit.edu/ma3655/ISTE240/last_semester/project2/" class="portfolio__item"> -->
-            <!-- <img src="img/fake_news_project_image.jpg" alt="" class="portfolio__img"> -->
-            <!-- </a> -->
-        </div>
-    </section>
-
-
-    <!-- Footer -->
-    <footer class="footer">
-        <a href="mailto:ma3655@rit.edu" class="footer__link fl1">ma3655@rit.edu</a>
-        <a href="mailto:mohammedal2144@gmail.com" class="footer__link fl2">moeal2144@gmail.com</a>
-        <ul class="social-list">
-            <!-- <li class="social-list__item">
-                <a class="social-list__link" href="https://codepen.io">
-                    <i class="fab fa-codepen"></i>
-                </a>
-            </li> -->
-            <li class="social-list__item">
-                <a class="social-list__link" target="_blank" href="https://www.linkedin.com/in/moe-alam/">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-            </li>
-            <li class="social-list__item">
-                <a class="social-list__link" href="https://twitter.com">
-                    <i class="fab fa-twitter"></i>
-                </a>
-            </li>
-            <li class="social-list__item">
-                <a class="social-list__link" target="_blank" href="https://github.com/Malam2704">
-                    <i class="fab fa-github"></i>
-                </a>
-            </li>
-        </ul>
-    </footer>
-
-
-    <script src="js/index.js"></script>
-
+            circles.forEach((circle, index) => {
+                const speed = index + 1;
+                const x = (mouseX - 0.5) * speed * 50;
+                const y = (mouseY - 0.5) * speed * 50;
+                circle.style.transform = `translate(${x}px, ${y}px)`;
+            });
+        });
+    </script>
 </body>
 
 </html>
